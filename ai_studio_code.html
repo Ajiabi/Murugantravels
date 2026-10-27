@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Murugan Travels | Safe, Comfortable & Reliable Travel</title>
+  <meta name="description" content="Official website of Murugan Travels. Reliable outstation cabs, local city taxi, airport transfers, tour packages, and tempo traveller rentals." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A192F',
+              blue: '#1E3A8A',
+              lightBlue: '#3B82F6',
+              gold: '#F59E0B',
+              goldHover: '#D97706',
+              surface: '#F8FAFC',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .badge-gold { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+    .hero-gradient { background: linear-gradient(180deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.95) 100%); }
+  </style>
+</head>
+<body class="bg-brand-surface text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- ================= TOP CONTACT BAR ================= -->
+  <div class="bg-brand-navy text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <a href="tel:[Add Business Phone Number]" class="hover:text-brand-gold transition" data-config="phone">[Add Business Phone Number]</a>
+        </span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <a href="mailto:[Add Business Email]" class="hover:text-brand-gold transition" data-config="email">[Add Business Email]</a>
+        </span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="flex items-center gap-1.5 text-slate-400">
+          <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Operating: 24/7 Service</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-xs text-brand-gold font-medium">Safe & Verified Drivers</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-sm border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-3 group" onclick="navigateTo('home')">
+        <div class="w-12 h-12 rounded-lg bg-brand-navy flex items-center justify-center text-brand-gold font-extrabold text-2xl shadow-inner border border-brand-gold/30">
+          M
+        </div>
+        <div>
+          <span class="text-2xl font-black tracking-tight text-brand-navy block leading-tight">MURUGAN<span class="text-brand-gold">.</span>TRAVELS</span>
+          <span class="text-[11px] font-semibold uppercase tracking-widest text-slate-500 block">Your Journey, Our Responsibility</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-7 font-medium text-slate-700 text-sm">
+        <button onclick="navigateTo('home')" class="nav-btn hover:text-brand-blue transition py-1" data-target="home">Home</button>
+        <button onclick="navigateTo('services')" class="nav-btn hover:text-brand-blue transition py-1" data-target="services">Services</button>
+        <button onclick="navigateTo('vehicles')" class="nav-btn hover:text-brand-blue transition py-1" data-target="vehicles">Our Fleet</button>
+        <button onclick="navigateTo('packages')" class="nav-btn hover:text-brand-blue transition py-1" data-target="packages">Tour Packages</button>
+        <button onclick="navigateTo('about')" class="nav-btn hover:text-brand-blue transition py-1" data-target="about">About Us</button>
+        <button onclick="navigateTo('contact')" class="nav-btn hover:text-brand-blue transition py-1" data-target="contact">Contact</button>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#" target="_blank" data-config="whatsapp-link" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.153.57 4.175 1.564 5.926l-1.664 6.074 6.244-1.637c1.706.924 3.652 1.437 5.72 1.437 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+          WhatsApp Us
+        </a>
+        <button onclick="navigateTo('book')" class="bg-brand-navy hover:bg-slate-800 text-brand-gold border border-brand-gold/40 px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide transition shadow-sm">
+          Book Your Trip
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-md text-slate-700 hover:text-brand-navy focus:outline-none" aria-label="Toggle Navigation">
+        <svg id="menuOpenIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        <svg id="menuCloseIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-6 space-y-3">
+      <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-800 hover:text-brand-blue">Home</button>
+      <button onclick="navigateTo('services'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-800 hover:text-brand-blue">Our Services</button>
+      <button onclick="navigateTo('vehicles'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-800 hover:text-brand-blue">Our Fleet & Vehicles</button>
+      <button onclick="navigateTo('packages'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-800 hover:text-brand-blue">Tour Packages</button>
+      <button onclick="navigateTo('about'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-800 hover:text-brand-blue">About Us</button>
+      <button onclick="navigateTo('contact'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-slate-800 hover:text-brand-blue">Contact Us</button>
+      <div class="pt-4 flex flex-col gap-2">
+        <button onclick="navigateTo('book'); toggleMobileMenu()" class="w-full text-center bg-brand-navy text-brand-gold py-3 rounded-lg font-bold">Book a Cab Now</button>
+        <a href="#" target="_blank" data-config="whatsapp-link" class="w-full text-center bg-emerald-600 text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2">
+          WhatsApp Us Directly
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= SPA VIEWS CONTAINER ================= -->
+  <main class="flex-grow">
+
+    <!-- ================= VIEW 1: HOME PAGE ================= -->
+    <section id="view-home" class="spa-view block">
+      <!-- HERO SECTION -->
+      <div class="relative bg-brand-navy text-white overflow-hidden">
+        <!-- Background decorative overlay -->
+        <div class="absolute inset-0 opacity-25 mix-blend-luminosity bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1600&auto=format&fit=crop');"></div>
+        <div class="absolute inset-0 hero-gradient"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Hero Copy -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-wider uppercase">
+              <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
+              24/7 Outstation & City Cabs
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+              Your Journey, <br><span class="text-brand-gold">Our Responsibility.</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-xl font-normal leading-relaxed">
+              Safe, Comfortable & Reliable Travel with Murugan Travels. Verified professional drivers, clean sanitized vehicles, and zero hidden charges.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <button onclick="navigateTo('book')" class="bg-brand-gold hover:bg-brand-goldHover text-brand-navy font-bold px-7 py-3.5 rounded-lg shadow-lg shadow-amber-500/20 transition transform hover:-translate-y-0.5">
+                Book Your Trip
+              </button>
+              <a href="tel:[Add Business Phone Number]" data-config="phone-link" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3.5 rounded-lg transition backdrop-blur">
+                <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                Call Now
+              </a>
+              <a href="#" target="_blank" data-config="whatsapp-link" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3.5 rounded-lg transition shadow-md">
+                WhatsApp Us
+              </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-800 text-slate-300 text-xs sm:text-sm">
+              <div class="flex items-center gap-2">
+                <span class="text-brand-gold text-lg">✓</span> Professional Chauffeurs
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-brand-gold text-lg">✓</span> Transparent Pricing
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-brand-gold text-lg">✓</span> On-Time Pickup
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Booking Card Component -->
+          <div class="lg:col-span-5">
+            <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 text-slate-800 border border-slate-100 relative">
+              <div class="border-b border-slate-100 pb-4 mb-5">
+                <h3 class="text-xl font-bold text-brand-navy">Fast Booking Request</h3>
+                <p class="text-xs text-slate-500 mt-1">Get an instant confirmation & driver allocation</p>
+              </div>
+
+              <form id="heroBookingForm" class="space-y-4" onsubmit="handleQuickBooking(event)">
+                <!-- Trip Type Tabs -->
+                <div class="grid grid-cols-3 gap-2 p-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">
+                  <label class="cursor-pointer text-center py-2 rounded-md transition has-[:checked]:bg-brand-navy has-[:checked]:text-white">
+                    <input type="radio" name="hero_trip_type" value="One-Way" class="sr-only" checked> One-Way
+                  </label>
+                  <label class="cursor-pointer text-center py-2 rounded-md transition has-[:checked]:bg-brand-navy has-[:checked]:text-white">
+                    <input type="radio" name="hero_trip_type" value="Round-Trip" class="sr-only"> Round-Trip
+                  </label>
+                  <label class="cursor-pointer text-center py-2 rounded-md transition has-[:checked]:bg-brand-navy has-[:checked]:text-white">
+                    <input type="radio" name="hero_trip_type" value="Local/Airport" class="sr-only"> Airport / Local
+                  </label>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Pickup Location</label>
+                    <input type="text" id="hero_pickup" required placeholder="City or Landmark" class="w-full text-sm px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue" />
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Drop Destination</label>
+                    <input type="text" id="hero_drop" required placeholder="Destination City" class="w-full text-sm px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Travel Date</label>
+                    <input type="date" id="hero_date" required class="w-full text-sm px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue" />
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Preferred Vehicle</label>
+                    <select id="hero_vehicle" class="w-full text-sm px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+                      <option value="Sedan (Dzire / Etios)">Sedan (Dzire / Etios - 4 Seater)</option>
+                      <option value="Hatchback (Swift / WagonR)">Hatchback (Swift / WagonR - 4 Seater)</option>
+                      <option value="SUV (Ertiga)">SUV (Ertiga - 6 Seater)</option>
+                      <option value="Premium SUV (Innova Crysta)">Premium SUV (Innova Crysta - 7 Seater)</option>
+                      <option value="Tempo Traveller (12-18 Seater)">Tempo Traveller (12-18 Seater)</option>
+                      <option value="Tourist Bus">Tourist Bus (21+ Seater)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">Your Mobile Number</label>
+                  <input type="tel" id="hero_phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number" class="w-full text-sm px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue" />
+                </div>
+
+                <button type="submit" class="w-full bg-brand-gold hover:bg-brand-goldHover text-brand-navy font-bold py-3.5 rounded-lg shadow-md transition flex items-center justify-center gap-2">
+                  <span>Send Booking Request via WhatsApp</span>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.153.57 4.175 1.564 5.926l-1.664 6.074 6.244-1.637c1.706.924 3.652 1.437 5.72 1.437 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HIGHLIGHTED FEATURES / BENEFITS -->
+      <section class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-2">Why Murugan Travels</h2>
+            <h3 class="text-3xl font-extrabold text-brand-navy">Built On Trust, Safety & Hospitality</h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="p-6 rounded-xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
+              <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-lg flex items-center justify-center font-bold text-xl mb-4">🛡️</div>
+              <h4 class="font-bold text-slate-800 text-lg mb-2">Verified Drivers</h4>
+              <p class="text-sm text-slate-600 leading-relaxed">Experienced, police-verified, and polite chauffeurs trained for highway safety.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
+              <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-lg flex items-center justify-center font-bold text-xl mb-4">💰</div>
+              <h4 class="font-bold text-slate-800 text-lg mb-2">Transparent Rates</h4>
+              <p class="text-sm text-slate-600 leading-relaxed">No hidden fuel or driver surcharges. Complete clarity before your trip starts.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
+              <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center font-bold text-xl mb-4">🧼</div>
+              <h4 class="font-bold text-slate-800 text-lg mb-2">Clean & Sanitized</h4>
+              <p class="text-sm text-slate-600 leading-relaxed">Well-maintained, odor-free, air-conditioned cars washed before every pickup.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
+              <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-lg flex items-center justify-center font-bold text-xl mb-4">⏰</div>
+              <h4 class="font-bold text-slate-800 text-lg mb-2">Punctual Pickups</h4>
+              <p class="text-sm text-slate-600 leading-relaxed">We value your time. Guaranteed on-time arrival at your doorstep or airport terminal.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLEET PREVIEW ON HOMEPAGE -->
+      <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-blue">Our Vehicles</span>
+              <h3 class="text-3xl font-extrabold text-brand-navy">Choose Your Travel Comfort</h3>
+            </div>
+            <button onclick="navigateTo('vehicles')" class="text-brand-blue font-bold text-sm hover:underline flex items-center gap-1">
+              View All Vehicles &rarr;
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="homeFleetGrid">
+            <!-- Injected via Fleet Script or statically available -->
+          </div>
+        </div>
+      </section>
+
+      <!-- FREQUENTLY ASKED QUESTIONS -->
+      <section class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-1">Got Questions?</h2>
+            <h3 class="text-3xl font-extrabold text-brand-navy">Frequently Asked Questions</h3>
+          </div>
+          <div class="space-y-4">
+            <details class="group bg-slate-50 p-5 rounded-xl border border-slate-200">
+              <summary class="font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">
+                <span>How do I confirm my booking with Murugan Travels?</span>
+                <span class="transition group-open:rotate-180">▾</span>
+              </summary>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                You can fill out our booking form or directly reach out on WhatsApp/Phone. Once we review your date and route, our coordinator sends you a driver allocation and exact quote for final confirmation.
+              </p>
+            </details>
+            <details class="group bg-slate-50 p-5 rounded-xl border border-slate-200">
+              <summary class="font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">
+                <span>Are toll charges, parking, and state permit fees included?</span>
+                <span class="transition group-open:rotate-180">▾</span>
+              </summary>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                Toll and parking expenses vary depending on your specific travel route. We provide transparent billing: we can either furnish an all-inclusive package or charge toll/parking strictly as per actual fastag slips.
+              </p>
+            </details>
+            <details class="group bg-slate-50 p-5 rounded-xl border border-slate-200">
+              <summary class="font-semibold text-slate-800 cursor-pointer list-none flex justify-between items-center">
+                <span>Can I book a vehicle for long outstation round-trips?</span>
+                <span class="transition group-open:rotate-180">▾</span>
+              </summary>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                Yes, outstation multi-day trips are our specialty. You can rent Sedans, Crysta, or Tempo Travellers for family tours, temple visits, hill stations, and corporate tours.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= VIEW 2: SERVICES ================= -->
+    <section id="view-services" class="spa-view hidden">
+      <div class="bg-brand-navy py-14 text-white text-center px-4">
+        <h1 class="text-3xl sm:text-4xl font-extrabold">Transportation Services</h1>
+        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Flexible, customized transportation solutions for individuals, families, and organizations.</p>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Service 1 -->
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop" alt="Outstation Cab" class="h-48 w-full object-cover"/>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-brand-navy mb-2">Outstation Cab Booking</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">Reliable one-way and round-trip outstation services with experienced highway drivers and comfortable air-conditioned cars.</p>
+              <button onclick="openBookingModal('Outstation Cab Booking')" class="w-full bg-brand-navy hover:bg-slate-800 text-white py-2.5 rounded-lg text-sm font-semibold transition">Book This Service</button>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop" alt="Airport Taxi" class="h-48 w-full object-cover"/>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-brand-navy mb-2">Airport Pickup & Drop</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">Guaranteed on-time pickups and drops to domestic and international terminals. Flight tracking included to accommodate delays.</p>
+              <button onclick="openBookingModal('Airport Pickup & Drop')" class="w-full bg-brand-navy hover:bg-slate-800 text-white py-2.5 rounded-lg text-sm font-semibold transition">Book This Service</button>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=800&auto=format&fit=crop" alt="City Taxi" class="h-48 w-full object-cover"/>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-brand-navy mb-2">Local City Taxi & Rentals</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">Half-day and full-day local packages (4hrs/40km or 8hrs/80km) for business meetings, shopping, and family outings.</p>
+              <button onclick="openBookingModal('Local City Taxi')" class="w-full bg-brand-navy hover:bg-slate-800 text-white py-2.5 rounded-lg text-sm font-semibold transition">Book This Service</button>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop" alt="Tempo Traveller" class="h-48 w-full object-cover"/>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-brand-navy mb-2">Tempo Traveller & Group Bus</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">Spacious 12 to 26-seater push-back Tempo Travellers and luxury tourist buses for marriages, pilgrimages, and group excursions.</p>
+              <button onclick="openBookingModal('Tempo Traveller Rental')" class="w-full bg-brand-navy hover:bg-slate-800 text-white py-2.5 rounded-lg text-sm font-semibold transition">Book This Service</button>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" alt="Corporate Travel" class="h-48 w-full object-cover"/>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-brand-navy mb-2">Corporate Transportation</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">Dedicated fleet support for corporate events, delegate pickups, business conferences, and employee daily commutes with GST billing.</p>
+              <button onclick="openBookingModal('Corporate Transportation')" class="w-full bg-brand-navy hover:bg-slate-800 text-white py-2.5 rounded-lg text-sm font-semibold transition">Book This Service</button>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Sightseeing" class="h-48 w-full object-cover"/>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-brand-navy mb-2">Pilgrimage & Sightseeing</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">Customized temple tour circuits, hill station family packages, and weekend vacation trips tailored to your itinerary.</p>
+              <button onclick="openBookingModal('Sightseeing Tour')" class="w-full bg-brand-navy hover:bg-slate-800 text-white py-2.5 rounded-lg text-sm font-semibold transition">Book This Service</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 3: VEHICLES & FLEET ================= -->
+    <section id="view-vehicles" class="spa-view hidden">
+      <div class="bg-brand-navy py-14 text-white text-center px-4">
+        <h1 class="text-3xl sm:text-4xl font-extrabold">Our Vehicle Fleet</h1>
+        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Every vehicle in our fleet is fully air-conditioned, commercially licensed, clean, and properly maintained.</p>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <!-- Category Filter -->
+        <div class="flex flex-wrap gap-2 justify-center mb-8" id="fleetFilterContainer">
+          <button onclick="filterFleet('all')" class="fleet-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-brand-navy text-white">All Vehicles</button>
+          <button onclick="filterFleet('sedan')" class="fleet-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 hover:bg-slate-300">Sedans</button>
+          <button onclick="filterFleet('suv')" class="fleet-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 hover:bg-slate-300">SUVs / Crysta</button>
+          <button onclick="filterFleet('tempo')" class="fleet-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 hover:bg-slate-300">Tempo Travellers</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="fullFleetGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 4: TOUR PACKAGES ================= -->
+    <section id="view-packages" class="spa-view hidden">
+      <div class="bg-brand-navy py-14 text-white text-center px-4">
+        <h1 class="text-3xl sm:text-4xl font-extrabold">Popular Tour Packages</h1>
+        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Curated travel itineraries with reliable driving and flexible stopovers.</p>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col">
+            <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=800&auto=format&fit=crop" class="h-52 w-full object-cover" alt="Temple Tour" />
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Pilgrimage Special</span>
+              <h3 class="text-xl font-bold text-brand-navy mt-1 mb-2">Temple Tour Circuit</h3>
+              <p class="text-sm text-slate-600 mb-4 flex-grow">Flexible 2 to 4 days packages covering historic South Indian temples with experienced drivers familiar with darshan timings and routes.</p>
+              <div class="text-xs text-slate-500 bg-slate-50 p-3 rounded-lg mb-4">
+                <strong>Includes:</strong> Dedicated vehicle, driver batta, fuel.
+              </div>
+              <button onclick="openBookingModal('Temple Tour Package')" class="w-full bg-brand-navy hover:bg-slate-800 text-brand-gold py-2.5 rounded-lg text-sm font-semibold transition">Request Package Quote</button>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop" class="h-52 w-full object-cover" alt="Hill Station" />
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Nature & Relaxation</span>
+              <h3 class="text-xl font-bold text-brand-navy mt-1 mb-2">Hill Station Getaways</h3>
+              <p class="text-sm text-slate-600 mb-4 flex-grow">Relaxing round-trip holiday packages to scenic hill spots (Ooty, Kodaikanal, Yercaud, Munnar) with certified ghat-road drivers.</p>
+              <div class="text-xs text-slate-500 bg-slate-50 p-3 rounded-lg mb-4">
+                <strong>Includes:</strong> Sightseeing points, hill permits, 24/7 driver support.
+              </div>
+              <button onclick="openBookingModal('Hill Station Package')" class="w-full bg-brand-navy hover:bg-slate-800 text-brand-gold py-2.5 rounded-lg text-sm font-semibold transition">Request Package Quote</button>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop" class="h-52 w-full object-cover" alt="Family Events" />
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Family Occasions</span>
+              <h3 class="text-xl font-bold text-brand-navy mt-1 mb-2">Wedding & Event Transport</h3>
+              <p class="text-sm text-slate-600 mb-4 flex-grow">End-to-end guest transportation with coordinated multi-vehicle fleets, Innovas, and Tempo Travellers for family weddings and gatherings.</p>
+              <div class="text-xs text-slate-500 bg-slate-50 p-3 rounded-lg mb-4">
+                <strong>Includes:</strong> Guest airport shuttles, venue shuttles, multiple vehicles.
+              </div>
+              <button onclick="openBookingModal('Event & Wedding Fleet')" class="w-full bg-brand-navy hover:bg-slate-800 text-brand-gold py-2.5 rounded-lg text-sm font-semibold transition">Request Package Quote</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 5: ABOUT US ================= -->
+    <section id="view-about" class="spa-view hidden">
+      <div class="bg-brand-navy py-14 text-white text-center px-4">
+        <h1 class="text-3xl sm:text-4xl font-extrabold">About Murugan Travels</h1>
+        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Committed to reliable transportation, passenger safety, and fair pricing.</p>
+      </div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="text-2xl font-bold text-brand-navy mb-4">Dedicated to Making Every Mile Stress-Free</h2>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              At <strong>Murugan Travels</strong>, our driving ethos is straightforward: <em>“Your Journey, Our Responsibility.”</em> We provide dependable personal and commercial transportation for outstation journeys, airport drops, local sightseeing, and corporate requirements.
+            </p>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              We know that travel is not just about moving from one destination to another—it is about reaching safely, comfortably, and on schedule. Our drivers are thoroughly verified, disciplined, and familiar with major highway circuits.
+            </p>
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="border-l-2 border-brand-gold pl-3">
+                <span class="block text-xl font-black text-brand-navy">24/7</span>
+                <span class="text-xs text-slate-500">Customer Assistance</span>
+              </div>
+              <div class="border-l-2 border-brand-gold pl-3">
+                <span class="block text-xl font-black text-brand-navy">100%</span>
+                <span class="text-xs text-slate-500">Commercial Licensed Fleet</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop" alt="About Murugan Travels" class="rounded-2xl shadow-xl w-full object-cover h-80" />
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+          <h3 class="text-xl font-bold text-brand-navy mb-4">Our Core Commitments</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-600">
+            <div>
+              <h4 class="font-bold text-slate-800 mb-1">Safety First</h4>
+              <p>Strict maintenance checks, speed-governed driving, and regular vehicle inspections prior to highway travel.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-800 mb-1">Clear Communication</h4>
+              <p>No sudden fuel surcharges, unexpected driver allowances, or unstated bills. Honest quotes right at inquiry.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-800 mb-1">Clean & Comfortable</h4>
+              <p>Air-conditioned cabins, clean seat upholstery, ample leg space, and accommodating chauffeurs for family comfort.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 6: BOOKING PAGE ================= -->
+    <section id="view-book" class="spa-view hidden">
+      <div class="bg-brand-navy py-12 text-white text-center px-4">
+        <h1 class="text-3xl sm:text-4xl font-extrabold">Book Your Cab</h1>
+        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">Fill out the trip details below to request a direct booking confirmation.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 py-12">
+        <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 sm:p-10">
+          <form id="dedicatedBookingForm" onsubmit="handleDedicatedBooking(event)" class="space-y-6">
+            
+            <div class="border-b border-slate-100 pb-4">
+              <h3 class="font-bold text-lg text-slate-800">1. Trip Specifications</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="border rounded-lg p-3 text-center cursor-pointer has-[:checked]:border-brand-blue has-[:checked]:bg-blue-50">
+                <input type="radio" name="trip_nature" value="One-Way Outstation" class="sr-only" checked />
+                <span class="block text-xs font-bold text-slate-700">One-Way Outstation</span>
+              </label>
+              <label class="border rounded-lg p-3 text-center cursor-pointer has-[:checked]:border-brand-blue has-[:checked]:bg-blue-50">
+                <input type="radio" name="trip_nature" value="Round-Trip Outstation" class="sr-only" />
+                <span class="block text-xs font-bold text-slate-700">Round-Trip Outstation</span>
+              </label>
+              <label class="border rounded-lg p-3 text-center cursor-pointer has-[:checked]:border-brand-blue has-[:checked]:bg-blue-50">
+                <input type="radio" name="trip_nature" value="Airport / Local" class="sr-only" />
+                <span class="block text-xs font-bold text-slate-700">Airport / Local Rental</span>
+              </label>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Pickup Address / City *</label>
+                <input type="text" id="book_pickup" required placeholder="e.g. T. Nagar, Chennai / Home Address" class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Destination Address / City *</label>
+                <input type="text" id="book_destination" required placeholder="e.g. Bangalore / Tirupati" class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Travel Date *</label>
+                <input type="date" id="book_date" required class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Pickup Time *</label>
+                <input type="time" id="book_time" required class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Return Date (Optional)</label>
+                <input type="date" id="book_return_date" class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none" />
+              </div>
+            </div>
+
+            <div class="border-b border-slate-100 pb-4 pt-2">
+              <h3 class="font-bold text-lg text-slate-800">2. Passenger & Vehicle Selection</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Vehicle Preference *</label>
+                <select id="book_vehicle_type" required class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none bg-white">
+                  <option value="Sedan (Dzire / Etios) - 4 Seats">Sedan (Dzire / Etios) - 4 Passengers</option>
+                  <option value="Hatchback (Swift / WagonR) - 4 Seats">Hatchback (Swift / WagonR) - 4 Passengers</option>
+                  <option value="SUV (Maruti Ertiga) - 6 Seats">SUV (Maruti Ertiga) - 6 Passengers</option>
+                  <option value="Premium (Innova Crysta) - 7 Seats">Premium (Innova Crysta) - 7 Passengers</option>
+                  <option value="Tempo Traveller - 12/17 Seats">Tempo Traveller - 12 to 17 Passengers</option>
+                  <option value="Tourist Bus - 21+ Seats">Tourist Coach / Bus - 21+ Passengers</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Approx. Passenger Count *</label>
+                <input type="number" id="book_passengers" min="1" max="50" value="2" required class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none" />
+              </div>
+            </div>
+
+            <div class="border-b border-slate-100 pb-4 pt-2">
+              <h3 class="font-bold text-lg text-slate-800">3. Primary Passenger Contact</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
+                <input type="text" id="book_name" required placeholder="Your Full Name" class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Mobile / WhatsApp Number *</label>
+                <input type="tel" id="book_contact_phone" pattern="[0-9]{10}" required placeholder="10-digit number" class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Special Requirements / Notes (Optional)</label>
+              <textarea id="book_notes" rows="2" placeholder="Luggage count, child seat, specific route stops, or GST invoice details" class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none"></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="w-full bg-brand-gold hover:bg-brand-goldHover text-brand-navy font-extrabold py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                <span>Submit & Confirm on WhatsApp</span>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.153.57 4.175 1.564 5.926l-1.664 6.074 6.244-1.637c1.706.924 3.652 1.437 5.72 1.437 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+              </button>
+              <p class="text-[11px] text-center text-slate-400 mt-3">All booking requests are verified with live driver schedules before final trip confirmation.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 7: CONTACT US ================= -->
+    <section id="view-contact" class="spa-view hidden">
+      <div class="bg-brand-navy py-14 text-white text-center px-4">
+        <h1 class="text-3xl sm:text-4xl font-extrabold">Contact Murugan Travels</h1>
+        <p class="text-slate-300 mt-2 max-w-xl mx-auto text-sm">We are available 24 hours a day, 7 days a week for inquiries and immediate cab arrangements.</p>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Contact Details -->
+          <div class="lg:col-span-5 space-y-6">
+            <h2 class="text-2xl font-bold text-brand-navy">Get In Touch Directly</h2>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Have an urgent pickup or require a customized quotation for tour packages and corporate vehicle rentals? Reach out via phone, WhatsApp, or drop by our office.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200">
+                <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Office Address</h4>
+                  <p class="text-sm font-semibold text-slate-800" data-config="address">[Add Business Address]</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200">
+                <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Phone & 24/7 Hotline</h4>
+                  <p class="text-sm font-semibold text-slate-800">
+                    <a href="tel:[Add Business Phone Number]" class="hover:text-brand-blue" data-config="phone">[Add Business Phone Number]</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200">
+                <div class="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Support</h4>
+                  <p class="text-sm font-semibold text-slate-800">
+                    <a href="mailto:[Add Business Email]" class="hover:text-brand-blue" data-config="email">[Add Business Email]</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200">
+                <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Operational Hours</h4>
+                  <p class="text-sm font-semibold text-slate-800">Available 24 Hours / 365 Days</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+              <h3 class="text-xl font-bold text-brand-navy mb-1">Send an Instant Message</h3>
+              <p class="text-xs text-slate-500 mb-6">We typically reply within 15 minutes during regular hours.</p>
+
+              <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Your Name *</label>
+                    <input type="text" id="contact_name" required placeholder="Full Name" class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue" />
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Phone Number *</label>
+                    <input type="tel" id="contact_phone" required pattern="[0-9]{10}" placeholder="10-digit number" class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">Subject</label>
+                  <input type="text" id="contact_subject" placeholder="General Inquiry / Tour Package / Corporate" class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue" />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-600 mb-1">Your Message *</label>
+                  <textarea id="contact_message" rows="4" required placeholder="Write your travel dates, route, or requirements..." class="w-full text-sm p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue"></textarea>
+                </div>
+
+                <button type="submit" class="bg-brand-navy hover:bg-slate-800 text-brand-gold font-bold py-3.5 px-8 rounded-lg transition shadow-md">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brand-navy text-slate-400 text-sm border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-brand-gold font-bold text-xl border border-brand-gold/30">
+              M
+            </div>
+            <span class="text-xl font-black text-white tracking-tight">MURUGAN<span class="text-brand-gold">.</span>TRAVELS</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Safe, comfortable, and reliable travel services. Specializing in outstation cab booking, airport transfers, corporate transit, and family tour packages.
+          </p>
+          <div class="text-xs text-brand-gold font-medium">
+            “Your Journey, Our Responsibility”
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><button onclick="navigateTo('home')" class="hover:text-white transition">Home</button></li>
+            <li><button onclick="navigateTo('services')" class="hover:text-white transition">Our Services</button></li>
+            <li><button onclick="navigateTo('vehicles')" class="hover:text-white transition">Vehicle Fleet</button></li>
+            <li><button onclick="navigateTo('packages')" class="hover:text-white transition">Tour Packages</button></li>
+            <li><button onclick="navigateTo('book')" class="hover:text-white transition">Book a Cab</button></li>
+            <li><button onclick="navigateTo('about')" class="hover:text-white transition">About Us</button></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li>Outstation Round-Trip Cabs</li>
+            <li>One-Way Drop Taxi</li>
+            <li>Airport Pickup & Drop</li>
+            <li>Tempo Traveller 12-26 Seater</li>
+            <li>Pilgrimage Tour Circuits</li>
+            <li>Corporate Employee Commute</li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Office & Contact</h4>
+          <p class="text-xs text-slate-400 mb-2 leading-relaxed" data-config="address">[Add Business Address]</p>
+          <p class="text-xs text-slate-300 font-semibold mb-1">Phone: <a href="tel:[Add Business Phone Number]" data-config="phone">[Add Business Phone Number]</a></p>
+          <p class="text-xs text-slate-300 font-semibold mb-3">WhatsApp: <a href="#" data-config="whatsapp-link">[Add WhatsApp Number]</a></p>
+          <div class="pt-2 flex gap-3 text-xs">
+            <button onclick="openModal('privacyModal')" class="hover:text-white underline">Privacy Policy</button>
+            <span>&bull;</span>
+            <button onclick="openModal('termsModal')" class="hover:text-white underline">Terms & Conditions</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-800 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <p>&copy; <span id="currentYear"></span> Murugan Travels. All rights reserved.</p>
+        <p>Official Website & Direct Booking Portal</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP & CALL BAR ================= -->
+  <!-- Floating WhatsApp Action -->
+  <a href="#" target="_blank" data-config="whatsapp-link" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-700 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 flex items-center justify-center">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.153.57 4.175 1.564 5.926l-1.664 6.074 6.244-1.637c1.706.924 3.652 1.437 5.72 1.437 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+  </a>
+
+  <!-- Mobile Bottom Sticky Call / WhatsApp CTA -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 p-2 flex gap-2 shadow-lg">
+    <a href="tel:[Add Business Phone Number]" data-config="phone-link" class="flex-1 bg-brand-navy text-brand-gold py-2.5 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      Call Now
+    </a>
+    <a href="#" target="_blank" data-config="whatsapp-link" class="flex-1 bg-emerald-600 text-white py-2.5 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5">
+      WhatsApp
+    </a>
+  </div>
+
+  <!-- ================= MODALS ================= -->
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[85vh] overflow-y-auto relative">
+      <button onclick="closeModal('privacyModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-xl font-bold">&times;</button>
+      <h3 class="text-xl font-bold text-brand-navy mb-4">Privacy Policy – Murugan Travels</h3>
+      <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+        <p>Murugan Travels respects the privacy of our passengers. This policy outlines how we collect and safeguard information submitted through our official website.</p>
+        <p><strong>1. Information Collection:</strong> When you request a booking or quotation, we collect your name, phone number, pickup location, travel dates, and vehicle preferences solely to coordinate your travel.</p>
+        <p><strong>2. Information Usage:</strong> Your contact details are utilized strictly for sending booking confirmations, driver details, vehicle location updates, and tax invoices. We do not sell or share personal information with third-party marketing companies.</p>
+        <p><strong>3. Driver Communication:</strong> Pick-up details are shared with our assigned chauffeurs for routing purposes only.</p>
+        <p>For inquiries regarding personal details, contact us at <span data-config="email">[Add Business Email]</span>.</p>
+      </div>
+      <div class="mt-6 text-right">
+        <button onclick="closeModal('privacyModal')" class="bg-brand-navy text-white text-xs font-semibold px-4 py-2 rounded-lg">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms & Conditions Modal -->
+  <div id="termsModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[85vh] overflow-y-auto relative">
+      <button onclick="closeModal('termsModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-xl font-bold">&times;</button>
+      <h3 class="text-xl font-bold text-brand-navy mb-4">Terms & Conditions – Murugan Travels</h3>
+      <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+        <p><strong>1. Booking Confirmation:</strong> Submitting a form on this website constitutes a booking request. Confirmation is subject to driver and vehicle availability and will be confirmed via phone or WhatsApp.</p>
+        <p><strong>2. Tolls, Taxes & Parking:</strong> State border taxes, highway toll plaza charges, and parking fees are to be settled as per actual receipts, unless an all-inclusive rate has been explicitly agreed in writing.</p>
+        <p><strong>3. Night Driving & Batta:</strong> For long-distance overnight travel, driver allowance (batta) applies as per standard commercial norms.</p>
+        <p><strong>4. Luggage Policy:</strong> Passengers must adhere to the luggage seating capacity recommended for each vehicle category.</p>
+      </div>
+      <div class="mt-6 text-right">
+        <button onclick="closeModal('termsModal')" class="bg-brand-navy text-white text-xs font-semibold px-4 py-2 rounded-lg">I Understand</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CENTRAL CONFIG & APP LOGIC ================= -->
+  <script>
+    // ==========================================
+    // 1. BUSINESS CONFIGURATION PLACEHOLDERS
+    // Replace these values with verified business info
+    // ==========================================
+    const MURUGAN_CONFIG = {
+      phone: "+91 98765 43210",              // Replace with business phone
+      rawPhone: "919876543210",              // For tel: links
+      whatsappNumber: "919876543210",        // 10 or 12 digit without +
+      email: "contact@murugantravels.com",   // Business email
+      address: "123, Travel Plaza, Main Road, Chennai, Tamil Nadu, India" // Business Address
+    };
+
+    // Fleet Catalog Data (Actual vehicle categories offered)
+    const FLEET_DATA = [
+      {
+        id: "sedan-dzire",
+        category: "sedan",
+        name: "Sedan (Swift Dzire / Etios)",
+        seats: "4 Passengers",
+        luggage: "2 Large + 1 Small Bag",
+        ac: "Dual Zone AC",
+        fuel: "Diesel / Petrol",
+        image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop",
+        desc: "Ideal for comfortable, economical outstation trips, airport transfers, and executive city travel."
+      },
+      {
+        id: "suv-ertiga",
+        category: "suv",
+        name: "Maruti Ertiga (MUV/SUV)",
+        seats: "6 Passengers",
+        luggage: "2-3 Medium Bags",
+        ac: "Roof Mounted AC",
+        fuel: "Diesel",
+        image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=800&auto=format&fit=crop",
+        desc: "Affordable 6-seater family favorite with good legroom and efficient highway comfort."
+      },
+      {
+        id: "suv-crysta",
+        category: "suv",
+        name: "Toyota Innova Crysta",
+        seats: "7 Passengers",
+        luggage: "4 Large Bags",
+        ac: "Individual AC Vents",
+        fuel: "Diesel",
+        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop",
+        desc: "The gold standard for long-distance family holidays and VIP corporate transit."
+      },
+      {
+        id: "tempo-12",
+        category: "tempo",
+        name: "Tempo Traveller (12 / 14 Seater)",
+        seats: "12-14 Passengers",
+        luggage: "Separate Rear Luggage Area",
+        ac: "High Capacity AC",
+        fuel: "Diesel",
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop",
+        desc: "Push-back reclining seats, LED screens, and generous headroom for family pilgrimages."
+      },
+      {
+        id: "tempo-18",
+        category: "tempo",
+        name: "Executive Tempo Traveller (17-20 Seater)",
+        seats: "17-20 Passengers",
+        luggage: "Generous Boot Space",
+        ac: "Fully Air Conditioned",
+        fuel: "Diesel",
+        image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=800&auto=format&fit=crop",
+        desc: "Great for larger family groups, marriage party transportation, and college / corporate outings."
+      },
+      {
+        id: "bus-tourist",
+        category: "tempo",
+        name: "Air-Conditioned Tourist Coach (21+ Seater)",
+        seats: "21 to 35 Passengers",
+        luggage: "Under-Floor Luggage Compartment",
+        ac: "Chilled Central AC",
+        fuel: "Heavy Commercial",
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop",
+        desc: "Full-scale tourist bus equipped for inter-state educational tours and grand wedding parties."
+      }
+    ];
+
+    // Initialize application settings on DOM load
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Populate current year
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+      // 2. Set default date inputs to today
+      const today = new Date().toISOString().split('T')[0];
+      const heroDate = document.getElementById("hero_date");
+      const bookDate = document.getElementById("book_date");
+      if (heroDate) heroDate.min = today;
+      if (bookDate) bookDate.min = today;
+
+      // 3. Bind Config place-holders throughout the document
+      document.querySelectorAll('[data-config="phone"]').forEach(el => el.textContent = MURUGAN_CONFIG.phone);
+      document.querySelectorAll('[data-config="phone-link"]').forEach(el => el.href = `tel:${MURUGAN_CONFIG.rawPhone}`);
+      document.querySelectorAll('[data-config="email"]').forEach(el => {
+        el.textContent = MURUGAN_CONFIG.email;
+        el.href = `mailto:${MURUGAN_CONFIG.email}`;
+      });
+      document.querySelectorAll('[data-config="address"]').forEach(el => el.textContent = MURUGAN_CONFIG.address);
+      document.querySelectorAll('[data-config="whatsapp-link"]').forEach(el => {
+        el.href = `https://wa.me/${MURUGAN_CONFIG.whatsappNumber}?text=${encodeURIComponent("Hello Murugan Travels, I would like to inquire about cab booking.")}`;
+      });
+
+      // 4. Render fleet items
+      renderFleet();
+
+      // 5. Setup mobile menu drawer trigger
+      const menuBtn = document.getElementById("mobileMenuBtn");
+      menuBtn.addEventListener("click", toggleMobileMenu);
+
+      // 6. Handle Hash based deep linking
+      window.addEventListener("hashchange", handleHashRouting);
+      handleHashRouting();
+    });
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      const openIcon = document.getElementById("menuOpenIcon");
+      const closeIcon = document.getElementById("menuCloseIcon");
+      menu.classList.toggle("hidden");
+      openIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    }
+
+    // Single Page Navigation Controller
+    function navigateTo(viewName) {
+      // Hide all views
+      document.querySelectorAll(".spa-view").forEach(view => {
+        view.classList.add("hidden");
+      });
+
+      // Show targeted view
+      const targetView = document.getElementById(`view-${viewName}`);
+      if (targetView) {
+        targetView.classList.remove("hidden");
+        window.location.hash = viewName;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Update Desktop Nav styles
+      document.querySelectorAll(".nav-btn").forEach(btn => {
+        if (btn.getAttribute("data-target") === viewName) {
+          btn.classList.add("text-brand-blue", "font-bold", "border-b-2", "border-brand-blue");
+        } else {
+          btn.classList.remove("text-brand-blue", "font-bold", "border-b-2", "border-brand-blue");
+        }
+      });
+    }
+
+    function handleHashRouting() {
+      const hash = window.location.hash.replace("#", "") || "home";
+      navigateTo(hash);
+    }
+
+    // Render Fleet Items dynamically
+    function renderFleet(filter = "all") {
+      const fullGrid = document.getElementById("fullFleetGrid");
+      const homeGrid = document.getElementById("homeFleetGrid");
+
+      const filtered = filter === "all" ? FLEET_DATA : FLEET_DATA.filter(item => item.category === filter);
+
+      const makeCardHtml = (v) => `
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col hover:shadow-md transition">
+          <img src="${v.image}" alt="${v.name}" class="h-48 w-full object-cover" />
+          <div class="p-6 flex flex-col flex-grow">
+            <h4 class="font-bold text-lg text-brand-navy mb-1">${v.name}</h4>
+            <p class="text-xs text-slate-500 mb-4">${v.desc}</p>
+            
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 mb-6 bg-slate-50 p-3 rounded-lg border border-slate-100">
+              <div>👤 <strong>Capacity:</strong> ${v.seats}</div>
+              <div>🧳 <strong>Luggage:</strong> ${v.luggage}</div>
+              <div>❄️ <strong>AC:</strong> ${v.ac}</div>
+              <div>⛽ <strong>Fuel:</strong> ${v.fuel}</div>
+            </div>
+
+            <button onclick="openVehicleBooking('${v.name}')" class="mt-auto w-full bg-brand-navy hover:bg-slate-800 text-brand-gold py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition">
+              Book This Vehicle
+            </button>
+          </div>
+        </div>
+      `;
+
+      if (fullGrid) {
+        fullGrid.innerHTML = filtered.map(makeCardHtml).join("");
+      }
+
+      // Also populate the 3 cards on the homepage preview
+      if (homeGrid) {
+        homeGrid.innerHTML = FLEET_DATA.slice(0, 3).map(makeCardHtml).join("");
+      }
+    }
+
+    function filterFleet(category) {
+      // Update filter button appearance
+      document.querySelectorAll(".fleet-filter-btn").forEach(btn => {
+        btn.classList.remove("bg-brand-navy", "text-white");
+        btn.classList.add("bg-slate-200", "text-slate-700");
+      });
+      event.target.classList.remove("bg-slate-200", "text-slate-700");
+      event.target.classList.add("bg-brand-navy", "text-white");
+
+      renderFleet(category);
+    }
+
+    // Open booking modal or pre-fill dedicated page
+    function openVehicleBooking(vehicleName) {
+      navigateTo("book");
+      const select = document.getElementById("book_vehicle_type");
+      if (select) {
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].text.includes(vehicleName.split(" ")[0])) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    function openBookingModal(serviceName) {
+      navigateTo("book");
+      const notes = document.getElementById("book_notes");
+      if (notes) {
+        notes.value = `Interested in booking service: ${serviceName}`;
+      }
+    }
+
+    // Modal Triggers
+    function openModal(id) {
+      document.getElementById(id).classList.remove("hidden");
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add("hidden");
+    }
+
+    // WhatsApp Message Generator from Hero Form
+    function handleQuickBooking(e) {
+      e.preventDefault();
+      const tripType = document.querySelector('input[name="hero_trip_type"]:checked').value;
+      const pickup = document.getElementById("hero_pickup").value;
+      const drop = document.getElementById("hero_drop").value;
+      const date = document.getElementById("hero_date").value;
+      const vehicle = document.getElementById("hero_vehicle").value;
+      const phone = document.getElementById("hero_phone").value;
+
+      const message = `*NEW BOOKING REQUEST – MURUGAN TRAVELS*
+--------------------------------
+• *Trip Type:* ${tripType}
+• *From:* ${pickup}
+• *To:* ${drop}
+• *Date:* ${date}
+• *Preferred Vehicle:* ${vehicle}
+• *Customer Phone:* ${phone}
+--------------------------------
+Please reply with driver availability and fare quotation.`;
+
+      const waUrl = `https://wa.me/${MURUGAN_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, "_blank");
+    }
+
+    // Full Dedicated Form Handler
+    function handleDedicatedBooking(e) {
+      e.preventDefault();
+      const tripType = document.querySelector('input[name="trip_nature"]:checked').value;
+      const pickup = document.getElementById("book_pickup").value;
+      const destination = document.getElementById("book_destination").value;
+      const travelDate = document.getElementById("book_date").value;
+      const travelTime = document.getElementById("book_time").value;
+      const returnDate = document.getElementById("book_return_date").value || "N/A";
+      const vehicle = document.getElementById("book_vehicle_type").value;
+      const passengers = document.getElementById("book_passengers").value;
+      const name = document.getElementById("book_name").value;
+      const phone = document.getElementById("book_contact_phone").value;
+      const notes = document.getElementById("book_notes").value || "None";
+
+      const message = `*OFFICIAL CAB BOOKING REQUEST*
+*Murugan Travels*
+--------------------------------
+*Passenger Details:*
+• Name: ${name}
+• Contact: ${phone}
+
+*Trip Details:*
+• Trip Type: ${tripType}
+• Pickup: ${pickup}
+• Destination: ${destination}
+• Date & Time: ${travelDate} at ${travelTime}
+• Return Date: ${returnDate}
+
+*Vehicle & Group:*
+• Vehicle: ${vehicle}
+• Passengers: ${passengers}
+• Notes/Requests: ${notes}
+--------------------------------
+_Please send confirmation and quotation._`;
+
+      const waUrl = `https://wa.me/${MURUGAN_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, "_blank");
+    }
+
+    // General Contact Form Handler
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById("contact_name").value;
+      const phone = document.getElementById("contact_phone").value;
+      const subject = document.getElementById("contact_subject").value || "General Inquiry";
+      const messageBody = document.getElementById("contact_message").value;
+
+      const fullMessage = `*INQUIRY FROM WEBSITE – MURUGAN TRAVELS*
+--------------------------------
+• *Name:* ${name}
+• *Phone:* ${phone}
+• *Subject:* ${subject}
+• *Message:* ${messageBody}`;
+
+      const waUrl = `https://wa.me/${MURUGAN_CONFIG.whatsappNumber}?text=${encodeURIComponent(fullMessage)}`;
+      window.open(waUrl, "_blank");
+    }
+  </script>
+</body>
+</html>
